@@ -10,24 +10,26 @@ const bodyStyles = {
         display: 'flex',
         height: '100%',
         width: '40vw',
-        backgroundColor: 'green',
+        alignItems: 'center',
+        justifyContent: 'center',
+        lineHeight: '4vw',
+    },
+    textContainer: {
+        display: 'flex',
+        flex: '1',
+        alignSelf: 'stretch',
+        margin: '5px',
+        backgroundColor: 'lightgrey',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    textContainer: {
-        width: '98%',
-        height: '98%',
-        backgroundColor: 'yellow',
-        // marginTop: 10,
-        // marginBottom: '10%',
-    },
     text: {
-        fontSize: '5vw',
+        fontSize: '4vw',
+        fontWeight: '900',
     },
     freeSpaceArea: {
         height: '100%',
-        flexGrow: '1',
-        backgroundColor: 'red',
+        flex: '1',
     },
 };
 
