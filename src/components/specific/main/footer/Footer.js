@@ -1,23 +1,48 @@
 import React from 'react';
-import withStyles from 'react-jss'
-import footerStyles from "./styles/footerStyles";
+import {createUseStyles} from 'react-jss'
 
-const Footer = ({classes}) => {
+const Footer = () => {
+    const useStyles = createUseStyles(footerStyles);
+    const styles = useStyles();
+
     const emailPressHandler = () => {
         console.log('EMAIL_PRESS');
     };
 
     return (
-        <div className={classes.mainContainer}>
-            <div className={classes.emailArea}>
+        <div className={styles.mainContainer}>
+            <div className={styles.emailArea}>
                 <div
-                    className={classes.emailTextArea}
+                    className={styles.emailTextArea}
                     onClick={emailPressHandler}>
-                    <span className={classes.emailText}>alexander.v.dorokhov@yandex.ru</span>
+                    <span className={styles.emailText}>alexander.v.dorokhov@yandex.ru</span>
                 </div>
             </div>
         </div>
     )
 };
 
-export default withStyles(footerStyles)(Footer);
+const footerStyles = {
+    mainContainer: {
+        display: 'flex',
+        height: '100%',
+        width: '100%',
+        backgroundColor: 'lightgrey',
+    },
+    emailArea: {
+        display: 'flex',
+        flexDirection: 'column-reverse',
+        backgroundColor: 'grey',
+    },
+    emailTextArea: {
+        display: 'inline-block',
+        padding: '5px',
+    },
+    emailText: {
+        display: 'inline-block',
+        backgroundColor: 'green',
+        fontSize: '18px',
+    },
+};
+
+export default Footer;

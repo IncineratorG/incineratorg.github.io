@@ -1,10 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {createUseStyles} from 'react-jss'
 
-const HoveredLetter = ({letter, fontSize}) => {
-    const hoveredColor = 'yellow';
-    const regularColor = 'black';
-    const [letterColor, setLetterColor] = useState(regularColor);
+const HoveredLetter = ({letter, fontSize, regularColor, hoveredColor}) => {
+    const [letterColor, setLetterColor] = useState('black');
 
     const useStyles = createUseStyles(hoveredLetterStyles);
     const styles = useStyles({
@@ -13,14 +11,16 @@ const HoveredLetter = ({letter, fontSize}) => {
     });
 
     const mouseEnterHandler = () => {
-        console.log('mouseEnterHandler');
         setLetterColor(hoveredColor);
     };
 
     const mouseLeaveHandler = () => {
-        console.log('mouseLeaveHandler');
         setLetterColor(regularColor);
     };
+
+    useEffect(() => {
+        setLetterColor(regularColor);
+    }, [regularColor, hoveredColor]);
 
     return (
         <div className={styles.mainContainer}>
