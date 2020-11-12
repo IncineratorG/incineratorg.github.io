@@ -1,17 +1,24 @@
 import React from 'react';
-import './styles/appStyles.css'
+import withStyles from 'react-jss'
+import appStyles from "./styles/appStyles";
 import Header from "../header/Header";
+import Body from "../body/Body";
+import Footer from "../footer/Footer";
 
-const App = () => {
+const App = ({classes}) => {
     return (
-        <div className='app-main-container'>
-            <div className='header'>
+        <div className={classes.mainContainer}>
+            <div className={classes.header}>
                 <Header />
             </div>
-            <div className='body'></div>
-            <div className='footer'></div>
+            <div className={classes.body}>
+                <Body />
+            </div>
+            <div className={classes.footer}>
+                <Footer />
+            </div>
         </div>
     )
 };
 
-export default App;
+export default withStyles(appStyles)(App);

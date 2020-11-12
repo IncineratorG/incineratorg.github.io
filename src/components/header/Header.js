@@ -1,11 +1,12 @@
 import React from 'react';
-import './styles/headerStyles.css'
+import withStyles from 'react-jss'
+import headerStyles from "./styles/headerStyles";
 
-const Header = () => {
+const Header = ({classes}) => {
     return (
-        <div className='header-main-container'>
+        <div className={classes.mainContainer}>
         </div>
     );
 };
 
-export default Header;
+export default withStyles(headerStyles)(Header);
