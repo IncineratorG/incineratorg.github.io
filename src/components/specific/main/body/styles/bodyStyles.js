@@ -2,7 +2,7 @@ const bodyStyles = {
     mainContainer: {
         height: '100%',
         width: '100%',
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'row',
     },
