@@ -16,7 +16,10 @@ const MainPageView = ({model, controller}) => {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.header}>
-                <Header onSwitchPress={headerSwitchPressHandler} />
+                <Header
+                    switcherOnLeftSide={backgroundColor === 'black'}
+                    onSwitchPress={headerSwitchPressHandler}
+                />
             </div>
             <div className={styles.body}>
                 <Body />

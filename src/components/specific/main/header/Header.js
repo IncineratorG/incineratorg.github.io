@@ -1,9 +1,9 @@
 import React from 'react';
 import {createUseStyles} from 'react-jss'
 import HoveredLetter from "../../../common/hovered-letter/HoveredLetter";
-import Switcher from "./switcher/Switcher";
+import Switcher from "../../../common/switcher/Switcher";
 
-const Header = ({onSwitchPress}) => {
+const Header = ({switcherOnLeftSide, onSwitchPress}) => {
     const useStyles = createUseStyles(headerStyles);
     const styles = useStyles();
 
@@ -27,7 +27,10 @@ const Header = ({onSwitchPress}) => {
                 </div>
             </div>
             <div className={styles.themeSwitcherArea}>
-                <Switcher />
+                <Switcher
+                    switchedToLeft={switcherOnLeftSide}
+                    onSwitchPress={switchPressHandler}
+                />
             </div>
         </div>
     );
@@ -57,7 +60,7 @@ const headerStyles = {
         display: 'flex',
         height: '100%',
         width: '10vw',
-        backgroundColor: 'black',
+        // backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
     },
