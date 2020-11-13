@@ -6,6 +6,8 @@ const BodyTextArea = () => {
     const useStyles = createUseStyles(bodyTextAreaStyles);
     const styles = useStyles();
 
+    const hoveredTextLineColors = ['cyan', 'red', '#bc6ff1', 'yellow', 'orange'];
+
     return (
         <div className={styles.mainContainer}>
             <div className={styles.textLinesArea}>
@@ -14,6 +16,8 @@ const BodyTextArea = () => {
                         textLine={'Hello, I\'m Chris!'}
                         fontSize={'3.5vw'}
                         fontWeight={'bold'}
+                        defaultTextLineColor={'black'}
+                        hoveredTextLineColors={hoveredTextLineColors}
                     />
                 </div>
                 <div>
@@ -21,6 +25,8 @@ const BodyTextArea = () => {
                         textLine={'A senior front-end'}
                         fontSize={'3.5vw'}
                         fontWeight={'bold'}
+                        defaultTextLineColor={'grey'}
+                        hoveredTextLineColors={hoveredTextLineColors}
                     />
                 </div>
                 <div>
@@ -28,6 +34,8 @@ const BodyTextArea = () => {
                         textLine={'developer currently'}
                         fontSize={'3.5vw'}
                         fontWeight={'bold'}
+                        defaultTextLineColor={'grey'}
+                        hoveredTextLineColors={hoveredTextLineColors}
                     />
                 </div>
                 <div>
@@ -35,6 +43,8 @@ const BodyTextArea = () => {
                         textLine={'making & mostly'}
                         fontSize={'3.5vw'}
                         fontWeight={'bold'}
+                        defaultTextLineColor={'grey'}
+                        hoveredTextLineColors={hoveredTextLineColors}
                     />
                 </div>
                 <div>
@@ -42,13 +52,17 @@ const BodyTextArea = () => {
                         textLine={'breaking things at'}
                         fontSize={'3.5vw'}
                         fontWeight={'bold'}
+                        defaultTextLineColor={'grey'}
+                        hoveredTextLineColors={hoveredTextLineColors}
                     />
                 </div>
                 <div>
                     <HoveredTextLine
-                        textLine={'Coalface'}
+                        textLine={'Coalface.'}
                         fontSize={'3.5vw'}
                         fontWeight={'bold'}
+                        defaultTextLineColor={'black'}
+                        hoveredTextLineColors={hoveredTextLineColors}
                     />
                 </div>
             </div>
@@ -63,13 +77,13 @@ const bodyTextAreaStyles = {
         alignItems: 'center',
         justifyContent: 'center',
         lineHeight: '10vw',
-        backgroundColor: 'green',
+        // backgroundColor: 'green',
         // margin: '5px',
     },
     textLinesArea: {
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: 'lightgrey',
+        // backgroundColor: 'lightgrey',
         lineHeight: '3vw',
         margin: '5px',
     },

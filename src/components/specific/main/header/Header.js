@@ -21,11 +21,20 @@ const Header = ({onSwitchPress}) => {
                         letter={'H'}
                         fontSize={'2vw'}
                         regularColor={'black'}
-                        hoveredColor={'yellow'} />
+                        hoveredColor={'yellow'}
+                    />
                     <HoveredLetter letter={'e'} fontSize={'2vw'} />
                     <HoveredLetter letter={'l'} fontSize={'2vw'} />
                     <HoveredLetter letter={'l'} fontSize={'2vw'} />
                     <HoveredLetter letter={'o'} fontSize={'2vw'} />
+                </div>
+            </div>
+            <div className={styles.testArea2}>
+                <div className={styles.ta2Item}>
+
+                </div>
+                <div className={styles.ta2ItemOverflow}>
+
                 </div>
             </div>
             <div className={styles.themeSwitcherArea}>
@@ -56,6 +65,27 @@ const headerStyles = {
         backgroundColor: 'lightgrey',
         justifySelf: 'center',
         alignSelf: 'center',
+    },
+    testArea2: {
+        display: 'flex',
+        width: '20%',
+        backgroundColor: 'red',
+    },
+    ta2Item: {
+        height: '20px',
+        width: '20px',
+        backgroundColor: 'green',
+        alignSelf: 'center',
+        justifySelf: 'center',
+    },
+    ta2ItemOverflow: {
+        height: '20px',
+        width: '20px',
+        backgroundColor: 'yellow',
+        position: 'absolute',
+        zIndex: '10',
+        // alignSelf: 'center',
+        // justifySelf: 'center',
     },
     themeSwitcherArea: {
         display: 'flex',

@@ -1,8 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {createUseStyles} from 'react-jss'
 import HoveredLetter from "../hovered-letter/HoveredLetter";
 
-const HoveredTextLine = ({textLine, fontSize, fontWeight}) => {
+const HoveredTextLine = ({
+        textLine,
+        fontSize,
+        fontWeight,
+        defaultTextLineColor,
+        hoveredTextLineColors,
+    }) => {
     const defaultFontSize = '2vw';
 
     const useStyles = createUseStyles(hoveredTextLineStyles);
@@ -12,6 +18,12 @@ const HoveredTextLine = ({textLine, fontSize, fontWeight}) => {
 
     let keyCounter = 1;
     const hoveredLettersComponent = textArray.map(letter => {
+        const regularColor = defaultTextLineColor;
+        let hoveredColor = 'yellow';
+        if (hoveredTextLineColors) {
+            hoveredColor = hoveredTextLineColors[keyCounter % hoveredTextLineColors.length];
+        }
+
         const key = keyCounter.toString();
         ++keyCounter;
         return (
@@ -20,8 +32,8 @@ const HoveredTextLine = ({textLine, fontSize, fontWeight}) => {
                 letter={letter}
                 fontSize={fontSize ? fontSize : defaultFontSize}
                 fontWeight={fontWeight}
-                regularColor={'black'}
-                hoveredColor={'yellow'}
+                regularColor={regularColor}
+                hoveredColor={hoveredColor}
             />
         )
     });
