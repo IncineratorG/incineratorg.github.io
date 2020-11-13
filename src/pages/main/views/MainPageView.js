@@ -8,13 +8,15 @@ import Footer from "../../../components/specific/main/footer/Footer";
 const MainPageView = ({model, controller}) => {
     const {backgroundColor} = model.data;
 
+    const {headerSwitchPressHandler} = controller;
+
     const useStyles = createUseStyles(mainPageStyles);
     const styles = useStyles({mainContainerBackgroundColor: backgroundColor});
 
     return (
         <div className={styles.mainContainer}>
             <div className={styles.header}>
-                <Header />
+                <Header onSwitchPress={headerSwitchPressHandler} />
             </div>
             <div className={styles.body}>
                 <Body />
