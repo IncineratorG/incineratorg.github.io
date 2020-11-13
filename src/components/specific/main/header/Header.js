@@ -51,8 +51,8 @@ const headerStyles = {
     },
     testArea: {
         display: 'flex',
-        height: '30px',
-        width: '100px',
+        // height: '30px',
+        // width: '100px',
         backgroundColor: 'lightgrey',
         justifySelf: 'center',
         alignSelf: 'center',
