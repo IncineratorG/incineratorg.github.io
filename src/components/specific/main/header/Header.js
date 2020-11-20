@@ -40,7 +40,7 @@ const headerStyles = {
     mainContainer: {
         display: 'flex',
         flexDirection: 'row',
-        // backgroundColor: 'grey',
+        backgroundColor: 'grey',
         height: '100%',
         width: '100%',
     },

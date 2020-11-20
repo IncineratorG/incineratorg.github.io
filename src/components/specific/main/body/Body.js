@@ -23,6 +23,7 @@ const bodyStyles = {
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
+        backgroundColor: 'purple',
     },
     freeSpaceArea: {
         height: '100%',
